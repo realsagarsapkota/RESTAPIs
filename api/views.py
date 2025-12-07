@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.views import APIView
+# from rest_framework.views import APIView
 from .models import Employee
 from django.shortcuts import get_object_or_404
 from .serializers import EmployeeSerializer
@@ -95,6 +95,6 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     serializer_class = EmployeeSerializer
     pagination_class = EmployeePageNumberPagination
     filter_backends = [DjangoFilterBackend]
-    # filterset_fields = ['designation', 'name']
+    filterset_fields = ['name', 'designation']
     filterset_class = EmployeeFilter
 

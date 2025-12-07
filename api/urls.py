@@ -20,7 +20,7 @@ urlpatterns = [
     # path("employees/<int:pk>/", EmployeeDetail.as_view(), name="employee_detail"),
 
     # Url for viewsets
-    path("", include(router.urls)),
+    path("", include(router.urls)), 
     
     
 ]
